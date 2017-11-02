@@ -23,6 +23,7 @@ public class myDbAdapter  {
         long id = db.insert(myDbHelper.TABLE_NAME, null , contentValues);
         return id;
     }
+
    static class myDbHelper extends SQLiteOpenHelper
    {
        private static final String DATABASE_NAME = "myDatabase";
@@ -32,7 +33,7 @@ public class myDbAdapter  {
        private static final String NAME = "Name";
        private static final String PASSWORD= "Password";
        private static final String CREATE_TABLE = "CREATE TABLE "+TABLE_NAME +
-               "( "+UID+" INTEGER PRIMARY KEY AUTOINCREMENT ," +NAME+ "VARCHAR(225)" + PASSWORD+"VARCHAR(225));";
+               "( "+UID+" INTEGER PRIMARY KEY AUTOINCREMENT ," +NAME+ " TEXT, " + PASSWORD+" TEXT);";
       // private static final String DROP_TABLE ="DROP TABLE IF EXISTS "+TABLE_NAME;
        private Context context;
 
